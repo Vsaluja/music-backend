@@ -1,9 +1,11 @@
 const express = require('express');
-const PORT = 8080;
 const path = require('path');
+require('dotenv').config();
 const app = express();
+const PORT = process.env.PORT || 8080;
 // General router - Till Assignment 2
 const router = require('./router/api')
+
 
 // Assignment 3 routing
 const artistRouter = require('./router/artist/artist');
